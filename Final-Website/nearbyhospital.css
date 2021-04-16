@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding-top: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body
+{
+   
+ /*background: rgb(238, 209, 190);*/
+ padding: 0 20 px;
+ font-family: 'Baloo Bhaina 2', cursive;
+
+}
+h1 {
+    text-align: center;
+    margin: 0.5rem 0;
+    font-size: 2.5rem;
+    
+} 
+
+.accordion{
+
+    max-width: 600px;
+    width:80%;
+   color: white;
+    background: rgb(6, 109, 168);
+    margin: 30px auto;
+    padding: 12px;
+    border-radius: 35px;
+
+}
+.accordion-item-header{
+    padding: 0.5rem 4rem 0.5rem 1rem;
+    min-height: 3.5rem;
+    line-height: 2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.accordion-item-header::after{
+
+    content: "\002B";
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+   /* transition: transform 0.2s ease-in-out;*/
+}
+.accordion-item-header.active::after{
+    content: "\2212";
+   /*transform: rotate(45deg);*/
+}
+.accordion-item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    
+  }
+  
+.accordion-item-body-content {
+
+    padding: 1.5rem;
+    line-height: 2rem;
+    border-top: 4px solid;
+    border-image: linear-gradient(to right, #fafcfbd7, transparent) 1;
+ 
+}
+
+@media(max-width:767px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+
